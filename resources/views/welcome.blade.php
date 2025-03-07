@@ -1,176 +1,1196 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
 
-        <title>Laravel</title>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>Pixel Perfect Portfolio</title>
 
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <style>
-                /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,:before,:after{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x: 0;--tw-border-spacing-y: 0;--tw-translate-x: 0;--tw-translate-y: 0;--tw-rotate: 0;--tw-skew-x: 0;--tw-skew-y: 0;--tw-scale-x: 1;--tw-scale-y: 1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness: proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width: 0px;--tw-ring-offset-color: #fff;--tw-ring-color: rgb(59 130 246 / .5);--tw-ring-offset-shadow: 0 0 #0000;--tw-ring-shadow: 0 0 #0000;--tw-shadow: 0 0 #0000;--tw-shadow-colored: 0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content: ""}html,:host{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Figtree,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-left-20{left:-5rem}.top-0{top:0}.z-0{z-index:0}.\!row-span-1{grid-row:span 1 / span 1!important}.-mx-3{margin-left:-.75rem;margin-right:-.75rem}.-ml-px{margin-left:-1px}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.\!hidden{display:none!important}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-5{height:1.25rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-5{width:1.25rem}.w-\[calc\(100\%_\+_8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-\[877px\]{max-width:877px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.resize{resize:both}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.\!flex-row{flex-direction:row!important}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-items-center{justify-items:center}.gap-2{gap:.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-l-md{border-top-left-radius:.375rem;border-bottom-left-radius:.375rem}.rounded-r-md{border-top-right-radius:.375rem;border-bottom-right-radius:.375rem}.border{border-width:1px}.border-gray-300{--tw-border-opacity: 1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.bg-\[\#FF2D20\]\/10{background-color:#ff2d201a}.bg-gray-50{--tw-bg-opacity: 1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from: transparent var(--tw-gradient-from-position);--tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to: #fff var(--tw-gradient-to-position)}.to-zinc-900{--tw-gradient-to: #18181b var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#ff2d20}.object-cover{-o-object-fit:cover;object-fit:cover}.object-top{-o-object-position:top;object-position:top}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.pt-3{padding-top:.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.text-sm{font-size:.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-5{line-height:1.25rem}.text-black{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-black\/50{color:#00000080}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\,0\,0\,0\.08\)\]{--tw-shadow: 0px 14px 34px 0px rgba(0,0,0,.08);--tw-shadow-colored: 0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow: 0 1px 2px 0 rgb(0 0 0 / .05);--tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.ring-black{--tw-ring-opacity: 1;--tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity, 1))}.ring-gray-300{--tw-ring-opacity: 1;--tw-ring-color: rgb(209 213 219 / var(--tw-ring-opacity, 1))}.ring-transparent{--tw-ring-color: transparent}.ring-white{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))}.ring-white\/\[0\.05\]{--tw-ring-color: rgb(255 255 255 / .05)}.drop-shadow-\[0px_4px_34px_rgba\(0\,0\,0\,0\.06\)\]{--tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0,0,0,.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\,0\,0\,0\.25\)\]{--tw-drop-shadow: drop-shadow(0px 4px 34px rgba(0,0,0,.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-150{transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.selection\:bg-\[\#FF2D20\] *::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:text-white *::-moz-selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-\[\#FF2D20\]::-moz-selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity: 1;background-color:rgb(255 45 32 / var(--tw-bg-opacity, 1))}.selection\:text-white::-moz-selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity: 1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-black\/70:hover{color:#000000b3}.hover\:text-gray-400:hover{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.hover\:text-gray-500:hover{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.hover\:ring-black\/20:hover{--tw-ring-color: rgb(0 0 0 / .2)}.focus\:z-10:focus{z-index:10}.focus\:border-blue-300:focus{--tw-border-opacity: 1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring:focus{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity, 1))}.active\:bg-gray-100:active{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.active\:text-gray-500:active{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.active\:text-gray-700:active{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:hidden{display:none}.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:flex-1{flex:1 1 0%}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0}.lg\:text-\[\#FF2D20\]{--tw-text-opacity: 1;color:rgb(255 45 32 / var(--tw-text-opacity, 1))}}.rtl\:flex-row-reverse:where([dir=rtl],[dir=rtl] *){flex-direction:row-reverse}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-gray-600{--tw-border-opacity: 1;border-color:rgb(75 85 99 / var(--tw-border-opacity, 1))}.dark\:bg-black{--tw-bg-opacity: 1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.dark\:bg-zinc-900{--tw-bg-opacity: 1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.dark\:via-zinc-900{--tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position);--tw-gradient-stops: var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to: #18181b var(--tw-gradient-to-position)}.dark\:text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.dark\:text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:text-white\/50{color:#ffffff80}.dark\:text-white\/70{color:#ffffffb3}.dark\:ring-zinc-800{--tw-ring-opacity: 1;--tw-ring-color: rgb(39 39 42 / var(--tw-ring-opacity, 1))}.dark\:hover\:text-gray-300:hover{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.dark\:hover\:text-white:hover{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:hover\:text-white\/70:hover{color:#ffffffb3}.dark\:hover\:text-white\/80:hover{color:#fffc}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity: 1;--tw-ring-color: rgb(63 63 70 / var(--tw-ring-opacity, 1))}.dark\:focus\:border-blue-700:focus{--tw-border-opacity: 1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.dark\:focus\:border-blue-800:focus{--tw-border-opacity: 1;border-color:rgb(30 64 175 / var(--tw-border-opacity, 1))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 45 32 / var(--tw-ring-opacity, 1))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity: 1;--tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1))}.dark\:active\:bg-gray-700:active{--tw-bg-opacity: 1;background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1))}.dark\:active\:text-gray-300:active{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}}
-            </style>
-        @endif
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%_+_8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela" rel="stylesheet">
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+    <!-- Favicon
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" sizes="16x16" href="assets/img/favicon.ico">
+    <link rel="manifest" href="assets/img/manifest.json">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+    <!-- Stylesheets
+    ================================================== -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
+    <!-- Font Awesome core CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
+</head>
+<body>
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
+    <!-- Hero Section, Background Image change in css -->
+    <div id="top" class="hero background-overlay">
+    
+        <!-- Name & Description -->
+        <div class="hero-content">
+            <h1>I am John Smith</h1>
+            <p class="hero-job"><span>I'M A CREATIVE WEB DEVELOPER</span></p>
+            <p class="hero-job-desc">I STAND ON A SWEET SPOT WHERE DESIGN &amp; CODE INTERSECTS. </p>
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
+        </div><!-- /.hero-content -->
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+        <div class="hero-arrow page-scroll home-arrow-down">
+            <a class="" href="#intro"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+        </div><!-- /.hero-arrow -->
 
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
+    </div><!-- /.hero -->
+    <!-- End Hero -->
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
+    <!-- Header -->
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation" data-spy="affix">
+            <div class="container">
+                <div class="navbar-header page-scroll">
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#portfolio-perfect-collapse" aria-expanded="false" >
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    
+                    <!-- Name -->
+                    <div class="page-scroll site-logo">
+                        <a href="#top">John</a>
+                    </div>
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+                </div><!-- /.navbar-header -->
 
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
+                <div class="main-menu collapse navbar-collapse" id="portfolio-perfect-collapse">
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
+                    <!-- Navigation -->
+                    <ul class="nav navbar-nav navbar-right">
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
+                        <li class="page-scroll"><a href="#top">Home</a></li>
+                        <li class="page-scroll"><a href="#intro">Intro</a></li>
+                        <li class="page-scroll"><a href="#about">About</a></li>
+                        <li class="page-scroll"><a href="#services">Services</a></li>
+                        <li class="page-scroll"><a href="#team">Team</a></li>
+                        <li class="page-scroll"><a href="#history">History</a></li>
+                        <li class="page-scroll"><a href="#works">Works</a></li>
+                        <li class="page-scroll"><a href="#contact">Contact</a></li>
+                        
+                    </ul><!-- /.navbar-nav -->
+
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav><!-- /.primary-navigation -->
+    </header><!-- /#header -->
+    <!-- End Header -->
+
+    <!-- Main content -->
+    <main id="main" class="site-main">
+
+        <!-- Hello section -->
+		<section class="site-section section-hello" id="intro">
+			<div class="container">
+				<h2>HELLO &amp; WELCOME</h2>
+				<p class="section-subtitle"><span>EXPLORE OUR WORLD</span></p>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="main-service text-right">
+							<div class="rectangle">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+							</div><!-- /.rectangle -->
+							<h3>We Meet Deadlines</h3>
+							<p>Your deadline is the most important value for us. Our job is to make sure the job is done perfectly before the deadline.</p>
+						</div><!-- /.main-service -->
+                        <div class="main-service text-right">
+                            <div class="rectangle">
+                                <i class="fa fa-comments" aria-hidden="true"></i>
                             </div>
-                        </div>
-                    </main>
+                            <h3>Communication Is Key</h3>
+                            <p>Our team is available to check on your questions and take in feedback as soon as possibly.</p>
+                        </div><!-- /.main-service -->
+					</div>
+					<div class="col-sm-4">
+						<div class="big-rectangle">
+							<img src="assets/img/john-logo.png" alt="">
+						</div><!-- /.big-rectangle -->
+					</div>
+					<div class="col-sm-4">
+                        <div class="main-service text-left">
+                            <div class="rectangle">
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                            </div>
+                            <h3>Quality Control</h3>
+                            <p>We test out everything to make sure that your project is fully functional, cross–browser compatible and meets your specifications.</p>
+                        </div><!-- /.main-service -->
+						<div class="main-service text-left">
+							<div class="rectangle">
+								<i class="fa fa-list" aria-hidden="true"></i>
+							</div><!-- /.rectangle -->
+							<h3>Pixel Perfect</h3>
+							<p>We develop meaningful digital products and experiences that matter with design thinking and creative craftsmanship.</p>
+						</div><!-- /.main-service -->
+					</div>
+				</div>
+			</div>
+		</section><!-- /.section-hello -->
+        <!-- End Hello section -->
 
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
+        <!-- Quote section -->
+		<section class="section-background section-quote background-overlay text-center">
+			<div class="container">
+				<p>We make our <span>work look good</span> &amp; have experience in the creation of brand identities for <span>print &amp; web</span>, with a difference.</p>
+			</div>
+		</section><!-- /.section-quote -->
+        <!-- End Quote section -->
+
+        <!-- About section -->
+        <section class="site-section section-about text-center" id="about">
+            <div class="container">
+                <h2>ABOUT John WORK</h2>
+                <p class="section-subtitle"><span>Our goal is to build products and services</span></p>
+                <div class="row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-laptop" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>Web design</h3>
+                            <p>Our approach to website design is to create a website that strengthens your company’s brand while ensuring ease of use and simplicity for your audience</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>Web development</h3>
+                            <p>The web development process involves taking the graphical elements defined in the design process and coding them into a custom theme.</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>SEO OPTIMIZATION</h3>
+                            <p>Go farther than you thought you could. With us you can go farther then ever before. Be in top results of searches.</p>
+                        </div><!-- /.feature-about -->
+                    </div>                    
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="feature-about">
+                            <div class="medium-rectangle rectangle">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </div><!-- /.rectangle -->
+                            <h3>SOCIAL MEDIA</h3>
+                            <p>It's important to keep your brand consistent and recognizable across all platforms</p>
+                        </div><!-- /.feature-about -->
+                    </div>
                 </div>
             </div>
+        </section><!-- /.section-about -->
+        <!-- End About section -->
+
+        <!-- Skills section -->
+        <section class="site-section section-skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>Introduction video</h2>
+                        <iframe src="https://player.vimeo.com/video/158928871" width="100%" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>SKILLS WE GOT</h2>
+                        <div class="progress-group">
+                            <p>Web design</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="100">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Web development</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="100">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Mobile Development</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="95">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>SEO optimization</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="100">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+
+                        <div class="progress-group">
+                            <p>Social Media</p>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" data-transitiongoal="90">
+                                </div>
+                            </div><!-- /.progress -->
+                        </div><!-- /.progress-group -->
+                    </div>
+                </div>
+            </div>
+        </section><!-- /.section-skills -->
+        <!-- End Skills section -->
+
+        <!-- Counters section -->
+        <section class="site-section section-counters text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 col-xs-6 col-sm-offset-1">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-rocket" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="167" data-speed="2000">167</span>
+                            </div><!-- /.rectangle -->
+                            <p>Projects Launched</p>
+                        </div><!-- /.counter -->
+                    </div>
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-trophy" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="25" data-speed="2000">25</span>
+                            </div><!-- /.rectangle -->
+                             <p>Awards won</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="98" data-speed="2000">98</span>
+                            </div><!-- /.rectangle -->
+                             <p>Proposals Sent</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                    <div class="col-sm-2 col-xs-6">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="945" data-speed="2000">945</span>
+                            </div><!-- /.rectangle -->
+                             <p>Hours of work</p>
+                        </div><!-- /.counter -->
+                    </div>                    
+                    <div class="col-sm-2 col-xs-12">
+                        <div class="counter">
+                            <div class="rectangle medium-rectangle ">
+                                <i class="fa fa-coffee" aria-hidden="true"></i>
+                                <span class="counter-start" data-to="256" data-speed="2000">256</span>
+                            </div><!-- /.rectangle -->
+                             <p>Cups of coffee</p>
+                        </div><!-- /.counter -->
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- /.section-counters -->
+        <!-- End Counters section -->
+
+        <!-- Services section -->
+        <section class="site-section section-services" id="services">
+
+            <div class="container-fluid">
+                <h2>SERVICES WE OFFER</h2>
+                <p class="section-subtitle"><span>Exceptional level of service</span></p>
+            </div>
+
+            <div class="container">
+
+                <div class="carousel slide" id="services-carousel">
+
+                    <div class="item-controls text-center">
+                        <a href="#services-carousel" class="left btn carousel-control" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <a href="#services-carousel" class="right btn carousel-control" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div><!-- /.item-controls -->
+
+                    <div class="carousel-indicators nav-tabs text-center">
+                        <a data-target="#services-carousel" href="#" data-slide-to="0" class="active">
+                            <div class="col-xs-4 col-sm-fifth">
+                                <div class="service">
+                                    <div class="rectangle">
+                                        <i class="fa fa-laptop" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="hidden-xs">Web design</p>
+                                </div>
+                            </div>
+                        </a><!-- /.item -->
+                        <a data-target="#services-carousel" href="#" data-slide-to="1">
+                            <div class="col-xs-4 col-sm-fifth">
+                                <div class="service">
+                                    <div class="rectangle">
+                                        <i class="fa fa-code" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="hidden-xs">Web development</p>
+                                </div>
+                            </div>
+                        </a><!-- /.item -->
+                        <a data-target="#services-carousel" href="#" data-slide-to="2">
+                            <div class="col-xs-4 col-sm-fifth">
+                                <div class="service">
+                                    <div class="rectangle">
+                                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="hidden-xs">Mobile Development</p>
+                                </div>
+                            </div>
+                        </a><!-- /.item -->
+                        <a data-target="#services-carousel" href="#" data-slide-to="3">
+                            <div class="col-xs-4 col-sm-fifth">
+                                <div class="service">
+                                    <div class="rectangle">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="hidden-xs">SEO optimization</p>
+                                </div>
+                            </div>
+                        </a><!-- /.item -->
+                        <a data-target="#services-carousel" href="#" data-slide-to="4">
+                            <div class="col-xs-4 col-sm-fifth">
+                                <div class="service">
+                                    <div class="rectangle">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="hidden-xs">Social Media</p>
+                                </div>
+                            </div>
+                        </a><!-- /.item -->
+                    </div><!-- /.carousel-indicators -->
+                        
+                           
+                    <div class="carousel-inner">
+                        <!-- Item 1 -->   
+                        <div id="item1" class="item tab-pane active">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="service-info">
+                                        <h3 class="service-title">Web Design</h3>
+                                        <p>Decorations don’t drive home messages. Content does. Reducing text-based content to a visual design element (the shape of the text) can result in bloated and unrealistic client expectations once real data replaces the dummy content. We allow our design decisions to be dictated by the on-page content and messaging, and often our designers use the actual content to inspire interesting elements that might not have been conceived without it</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/img/web-design.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div><!-- /.item -->
+                        <!-- Item 2 -->   
+                        <div id="item2" class="item tab-pane">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="service-info">
+                                        <h3 class="service-title">Web Development</h3>
+                                        <p>Once we have come up with a unique design and have finalized the textures and graphics to be added, the next step is to make it all come together. And that is what we aim to achieve at our web development agency India. Only a professionally designed website can justify the uniqueness of your idea and this is a fact clearly understood by our team. </p>
+
+                                        <p>While a good design can impress the users, it is the codes and development process that ensures that your target users will find the browsing experience equally amazing as your design. </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/img/web-development.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div><!-- /.item -->
+                        <!-- Item 3 -->   
+                        <div id="item3" class="item tab-pane">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="service-info">
+                                        <h3 class="service-title">Mobile Development</h3>
+                                        <p>With an increasing importance being given to smart phones, and mobile apps, it has become immensely important to include app development as part of web design services. Our team is known to provide excellent and extraordinary apps that are unique in every way. All the apps developed by our team are based on providing interesting features combined with enhanced functionality. With a mobile app in place, you can increase the reach of your brand and broaden its horizons too. You can have an easy to use professional app created that provides ease of functionality and an amazing appeal.</p>                                     
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/img/mobile-development.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div><!-- /.item -->
+                        <!-- Item 4 -->   
+                        <div id="item4" class="item tab-pane">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="service-info">
+                                        <h3 class="service-title">SEO optimization</h3>
+                                        <p>Search engine optimization (SEO) is the process of improving the visibility of a web site in search engines. Consumer puts a lot of trust in search engines to find what they need. Google receives 34,000 searches per second. Those searches involve finding products, reviewing brands, and looking up business locations.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/img/seo-optimization.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div><!-- /.item -->
+                        <!-- Item 5 -->   
+                        <div id="item5" class="item tab-pane">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="service-info">
+                                        <h3 class="service-title">Social Media</h3>
+                                        <p>Social Media, has become an essential tool of marketing an online business. It gives you a platform to interact and inform people about yourself and your brand. The concept of social media basically refers to the task of promoting websites or business through social media platforms..</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="assets/img/social-media.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div><!-- /.item -->
+                    </div><!-- /.carousel-inner -->
+                </div><!-- /.carousel -->
+            </div>
+        </section><!-- /.section-services -->
+        <!-- End Services section -->
+
+        <!-- Reviews section -->
+        <section class="site-section section-reviews text-center">
+            <div class="container">
+                <h2>Client Reviews</h2>
+                <p class="section-subtitle"><span>OUR CLIENTS LOVE US! READ WHAT THEY HAVE TO SAY</span></p>
+            </div>
+
+            <div class="blue-bg">
+                <div class="container">
+                    <div class="review-carousel">
+                        <!-- Review 1 -->
+                        <div class="review">
+                            <div class="rectangle">
+                                <img src="assets/img/review.jpg" class="img-res" alt="">
+                            </div>
+                            <p>If there were 100 star rating I would leave 110. I have been building WP sites now full time for 7 years and in business for 12 and have never worked with such a solid company with such a wonderful set of themes.</p>
+                            <div class="review-author">
+                                <h3>Mike Taylor</h3>
+                                <p>CEO at Sports Portal</p>
+                            </div><!-- /.review-author -->
+                        </div><!-- /.review -->
+                        <!-- Review 2 -->
+                        <div class="review">
+                            <div class="rectangle">
+                                <img src="assets/img/review-2.jpg" class="img-res" alt="">
+                            </div>
+                            <p>Diana Johnson is a rare SEO consultant who does things the right way. I’ve been consistently impressed with her process, organization and strategic method of doing SEO the right way.</p>
+                            <div class="review-author">
+                                <h3>Anna Murray</h3>
+                                <p>CEO at Law firm</p>
+                            </div><!-- /.review-author -->
+                        </div><!-- /.review -->
+                    </div><!-- /.review-carousel -->
+                </div>
+            </div>
+        </section><!-- /.section-reviews -->
+        <!-- End Reviews section -->
+
+        <!-- Team section -->
+        <section class="site-section section-team" id="team">
+            <div class="container">
+                <h2>MEET MY TEAM</h2>
+                <p class="section-subtitle"><span>This is the team that is working with me</span></p>
+                
+                <div class="team">
+                    <div class="row">   
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/employee-1.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">DIANA JOHNSON</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">DIANA JOHNSON</h3>
+                                            <p class="team-member-back-position">Web Designer</p>
+                                            <p class="team-member-back-info">Curabitur nulla odio bibendum sit amet facilisis sed lobortis id, just Donec ollic itudin facil isis nulla. Donec eget ligula. </p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-facebook"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-linkedin"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-dribbble"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/employee-2.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">ADAM HENRY</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">ADAM HENRY</h3>
+                                            <p class="team-member-back-position">Web Developer</p>
+                                            <p class="team-member-back-info">Curabitur nulla odio bibendum sit amet facilisis sed lobortis id, just Donec ollic itudin facil isis nulla. Donec eget ligula. </p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-facebook"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-linkedin"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-dribbble"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/employee-3.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">ROBERT DOE</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">ROBERT DOE</h3>
+                                            <p class="team-member-back-position">Mobile APP Developer</p>
+                                            <p class="team-member-back-info">Curabitur nulla odio bibendum sit amet facilisis sed lobortis id, just Donec ollic itudin facil isis nulla. Donec eget ligula. </p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-facebook"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-linkedin"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-dribbble"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                        <!-- Team Member --> 
+                        <div class="col-md-3 col-xs-6">
+                            <div class="team-member">
+                                <div class="flipper">
+                                    <div class="team-member-front">
+                                        <div class="team-member-thumb">
+                                            <img src="assets/img/employee-4.jpg" class="img-res" alt="">
+                                        </div>  <!-- /.team-member-thumb -->
+                                        <p class="team-member-front-name">JULIA BROWN</p>
+                                    </div><!-- /.team-member-front -->
+                                    <div class="team-member-back">
+                                        <div class="team-member-info">
+                                            <h3 class="team-member-back-name">JULIA BROWN</h3>
+                                            <p class="team-member-back-position">Seo Specialist</p>
+                                            <p class="team-member-back-info">Curabitur nulla odio bibendum sit amet facilisis sed lobortis id, just Donec ollic itudin facil isis nulla. Donec eget ligula. </p>
+                                            <div class="social-icons small">
+                                                <a href="#" class="rectangle"><i class="fa fa-facebook"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-linkedin"></i></a>
+                                                <a href="#" class="rectangle"><i class="fa fa-dribbble"></i></a>
+                                            </div>
+                                        </div><!-- /.team-member-back-info -->
+                                    </div><!-- /.team-member-back -->  
+                                </div>         
+                            </div><!-- /.team-member -->       
+                        </div>
+                    </div>
+                </div><!-- /.team -->   
+            </div>
+        </section><!-- /.section-team -->
+        <!-- End Team section -->
+
+        <!-- History section --> 
+        <section class="section-history" id="history">
+            <div class="container">          
+                <div class="text-center section-diff-title">     
+                    <h2>A Look Back At Our History</h2>
+                    <p>This my Education and Experience</p>
+                </div> 
+                <!-- Timeline --> 
+                <ul class="timeline">
+                    <!-- Timeline badge --> 
+                    <li class="timeline-start">
+                        <div class="rectangle"><span>2016</span></div>
+                    </li><!-- /.timeline-start -->
+
+                    <!-- Timeline job & description  --> 
+                    <li>
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <div class="timeline-date">
+                                    <p>13 sep</p>
+                                </div><!-- /.timeline-date -->
+                                <div class="timeline-position">
+                                    <p>Web design &amp; Development</p>
+                                </div><!-- /.timeline-position -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">
+                                <div class="timeline-body-thumb">
+                                    <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
+                                </div><!-- /.timeline-body-thumb -->
+                                <p>Designing and developing a Wordpress Website</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li>
+
+                    <!-- Timeline badge --> 
+                    <li class="timeline-start">
+                        <div class="rectangle"><span>2017</span></div>
+                    </li><!-- /.timeline-start -->
+
+                    <!-- Timeline job & description, inverted  --> 
+                    <li class="timeline-inverted">
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                               <div class="timeline-position">
+                                    <p>Web Design</p>
+                                </div><!-- /.timeline-position -->
+                                <div class="timeline-date">
+                                    <p>5 Jan</p>
+                                </div><!-- /.timeline-date -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">
+                                <div class="timeline-body-thumb">
+                                    <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
+                                </div><!-- /.timeline-body-thumb -->
+                                <p>Designing a solution for mobile app</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li><!-- /.timeline-inverted -->
+
+                    <!-- Timeline job & description  --> 
+                    <li>
+                        <div class="rectangle timeline-rectangle"></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <div class="timeline-date">
+                                    <p>25 Aug</p>
+                                </div><!-- /.timeline-date -->
+                                <div class="timeline-position">
+                                    <p>Seo Optimization</p>
+                                </div><!-- /.timeline-position -->
+                            </div><!-- /.timeline-heading -->
+                            <div class="timeline-body">
+                                <div class="timeline-body-thumb">
+                                    <img src="assets/img/timeline-img.jpg" class="img-res" alt="">
+                                </div><!-- /.timeline-body-thumb -->
+                                <p>SEO optimizing a couple of websites</p>
+                            </div><!-- /.timeline-body -->
+                        </div><!-- /.timeline-panel -->
+                    </li>
+
+                    <!-- Timeline Badge  --> 
+                    <li class="timeline-end">
+                        <div class="rectangle"><span>More</span></div>
+                    </li><!-- /.timeline-end -->
+                </ul><!-- /.timeline -->
+            </div>
+        </section><!-- /.section-history -->
+        <!-- End History section --> 
+
+        <!-- Portfolio/Works section --> 
+        <section class="site-section section-works" id="works">
+            <div class="container">
+                <h2>RECENT WORKS</h2>
+                <p class="section-subtitle"><span>OUR CLIENTS LOVE US! READ WHAT THEY HAVE TO SAY</span></p>
+
+                <div class="portfolio">
+                    <ul class="portfolio-sorting list-inline">
+                        <li><a href="#" class=" active" data-group="all">all</a></li>
+                        <li><a href="#" class="" data-group="webdesign">Web Design</a></li>
+                        <li><a href="#" class="" data-group="webdev">Web Development</a></li>
+                        <li><a href="#" class="" data-group="mobileapps">Mobile apps</a></li>
+                    </ul><!-- /.portfolio-sorting  -->
+
+                    <div id="grid">
+                        
+                        <!-- Portfolio item --> 
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-1.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem1">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>PSD Template</h3>
+                                    <p>Web Design</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-2.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem2">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>Website</h3>
+                                    <p>Web Development</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["mobileapps"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-4.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem3">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>IOS App</h3>
+                                    <p>Mobile App</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-3.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem4">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>PSD Template</h3>
+                                    <p>Web Design</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-5.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem5">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>Wordpress Website</h3>
+                                    <p>Web Development</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["mobileapps"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-6.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem6">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>Android App</h3>
+                                    <p>Mobile App</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdev"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-7.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem7">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>Woocommerce Website</h3>
+                                    <p>Web Development</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+                        <!-- Portfolio item -->
+                        <div class="col-md-3 col-sm-4 col-xs-6" data-groups='["webdesign"]'>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-thumb">
+                                    <img src="assets/img/portfolio-8.jpg" alt="" class="img-res">
+                                    <a href="#" class="rectangle" data-toggle="modal" data-target="#portfolioItem8">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div><!-- /.portfolio-item-thumb  -->
+                                <div class="portfolio-info">
+                                    <h3>PSD Template</h3>
+                                    <p>Web Design</p>
+                                </div><!-- /.portfolio-info  -->
+                            </div>
+                        </div><!-- /.col-md-3  -->
+
+                    </div><!-- /#grid -->
+                </div>
+            </div>
+        </section><!-- /.section-works -->
+        <!-- End Works section --> 
+
+        <!-- Me section --> 
+        <section class="section-background section-me background-overlay text-center">
+            <div class="container page-scroll">
+                <h2>Are You Impressed By My Work?</h2>
+                <p>Durabitur commodo ras non urna mauris mollis auctor proin laoreet</p>
+                <a href="#contact" class="btn">GET IN TOUCH</a>
+            </div>
+        </section><!-- /.section-me -->
+        <!-- End Me section --> 
+
+        <!-- Clients section --> 
+        <section class="section-clients">
+            <div class="container">
+                <div class="text-center section-diff-title">     
+                    <h2>Clients I’ve Worked So Far</h2>
+                    <p></p>
+                </div> 
+
+                <div class="clients-carousel">
+                    <!-- Client --> 
+                    <a href="#" class="client">
+                        <img src="assets/img/client-1.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->                    
+                    <!-- Client -->
+                    <a href="#" class="client">
+                        <img src="assets/img/client-2.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->                    
+                    <!-- Client -->
+                    <a href="#" class="client">
+                        <img src="assets/img/client-3.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->                    
+                    <!-- Client -->
+                    <a href="#" class="client">
+                        <img src="assets/img/client-4.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->                    
+                    <!-- Client -->
+                    <a href="#" class="client">
+                        <img src="assets/img/client-5.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->                    
+                    <!-- Client -->
+                    <a href="#" class="client">
+                        <img src="assets/img/client-3.png" class="img-responsive" alt="">
+                    </a><!-- /.client -->
+                </div><!-- /.clients-carousel -->
+            </div>
+        </section><!-- /.section-clients -->
+        <!-- End Clients section --> 
+
+        <!-- Twitter section --> 
+        <section class="section-background section-twitter background-overlay text-center">
+            <div class="container">
+                <div class="rectangle">
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <p>Latest from Twtter</p>
+                <p>So here’s how you can integrate sign up and sign in for your web and iOS apps, with AWS Cognito.</p>
+                <a href="#" class="btn btn-inverted">follow me</a>
+            </div>
+        </section><!-- /.section-twitter-->
+        <!-- End Twitter section --> 
+
+        <!-- Contacts section --> 
+        <section class="site-section section-contact" id="contact">
+            <div class="container">
+                <h2>CONTACT MiKE</h2>
+                <p class="section-subtitle"><span>Here i am</span></p>
+                <div class="row">
+                    <form>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea class="form-control" placeholder="Your Message"  required></textarea>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <button class="btn btn-inverted">Send Message</button>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </section><!-- /.section-contact-->
+        <!-- End Contacts section --> 
+        
+        <!-- Social Networks section --> 
+        <section class="section-networks blue-bg">
+            <div class="container">
+                <a href="#" class="rectangle">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a href="#" class="rectangle">
+                    <i class="fa fa-dribbble"></i>
+                </a>
+            </div>
+        </section><!-- /.section-networks-->
+        <!-- End Social Networks section --> 
+
+    </main><!-- /#main -->
+    <!-- End Main content -->
+
+    <!-- Footer --> 
+    <footer id="colophon" class="site-footer">
+
+        <div class="container-fluid">
+
+            <ul class="list-unstyled list-inline">
+                <li class="page-scroll"><a href="#top">Home</a></li>
+                <li class="page-scroll"><a href="#intro">Intro</a></li>
+                <li class="page-scroll"><a href="#about">About</a></li>
+                <li class="page-scroll"><a href="#services">Services</a></li>
+                <li class="page-scroll"><a href="#team">Team</a></li>
+                <li class="page-scroll"><a href="#history">History</a></li>
+                <li class="page-scroll"><a href="#works">Works</a></li>
+                <li class="page-scroll"><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="page-scroll">
+                <a href="#top" class="rectangle">
+                    <i class="fa fa-angle-double-up"></i>
+                </a>
+            </div>
+
         </div>
-    </body>
+
+        <div class="container text-center">
+            <p class="copyright">&copy; <a href="http://pixelperfect.mk/" target="_blank">PixelPerfect</a> - 2017</p>
+        </div>
+
+    </footer><!-- /#footer -->
+    <!-- End Footer --> 
+
+    <!-- Modals -->
+    <div id="portfolioItem1" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-1.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem2" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-2.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem3" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-4.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem4" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-3.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem5" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-5.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem6" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-6.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem7" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-7.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="portfolioItem8" class="modal fade fade-scale" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="rectangle" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                    <img class="img-res" src="assets/img/portfolio-8.jpg" alt="">
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title">Project title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo finibus tristique. Maecenas dignissim condimentum sem eu tincidunt. Curabitur in dui quis magna vestibulum pulvinar a ut urna. Nam pellentesque mattis urna. Aenean eget lectus sit amet turpis facilisis consectetur quis vel ante. Integer in massa ut nibh ultricies sagittis imperdiet in ante. Nam sed turpis vel ante placerat feugiat ac tempus magna. Nam aliquet ullamcorper dolor non hendrerit.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn">Visit Page</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- jQuery core js | Do not Delete -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap core js | Do not Delete -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap progressbar JS -->
+    <script src="assets/js/bootstrap-progressbar.min.js"></script>
+
+    <!-- Count To JS -->
+    <script src="assets/js/jquery.countTo.min.js"></script>
+
+    <!-- Easing JS -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+
+    <!-- Shuffle JS -->
+    <script src="assets/js/jquery.shuffle.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="assets/js/slick.min.js"></script>
+
+    <!-- Touchswipe JS -->
+    <script src="assets/js/touchswipe.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+  
+</body>
 </html>
