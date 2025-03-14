@@ -83,7 +83,7 @@
                     
                     <!-- Name -->
                     <div class="page-scroll site-logo">
-                        <a href="#top">Ismael</a>
+                        <a href="#top">Ismael Moreno</a>
                     </div>
 
                 </div><!-- /.navbar-header -->
