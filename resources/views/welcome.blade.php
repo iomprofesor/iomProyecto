@@ -84,6 +84,7 @@
                     <!-- Name -->
                     <div class="page-scroll site-logo">
                         <a href="#top">Ismael Moreno</a>
+                        <a href="#top">Ismael Ocaña</a>
                     </div>
 
                 </div><!-- /.navbar-header -->
